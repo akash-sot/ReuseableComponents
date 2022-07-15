@@ -1,0 +1,21 @@
+.normalTable {
+  background-color: #ffffff;
+  .table th,
+  tr {
+    vertical-align: text-top;
+    word-wrap: normal;
+  }
+  .tableHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    h2 {
+      margin: 0;
+    }
+    .tableHeaderBtns {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
