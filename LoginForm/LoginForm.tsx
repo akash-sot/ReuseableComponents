@@ -3,9 +3,9 @@ import LogoWithText from "../../../Assets/Icons/LogoWithText.png";
 import { Form, Input, Button, Alert, Space, message } from "antd";
 import { useEffect, useState } from "react";
 import { UserOutlined } from "@ant-design/icons";
-import { auth } from "../../../API/Auth";
+import { auth } from "../../../CommonMethods/API/Auth";
 import { useNavigate, useParams } from "react-router-dom";
-import { mask, validateEmail } from "../../../Helper/Methods";
+import { mask, validateEmail } from "../../../CommonMethods/Helper/Methods";
 import { OtpInput } from "../..";
 
 function Login(props: { userType: string }) {

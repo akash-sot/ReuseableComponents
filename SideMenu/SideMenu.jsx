@@ -3,7 +3,7 @@ import { Menu } from "antd";
 import SubMenu from "antd/lib/menu/SubMenu";
 import roleMenu from "../../../Configs/SideMenuItems";
 import { Link } from "react-router-dom";
-import { auth } from "../../../API/Auth";
+import { auth } from "../../../CommonMethods/API/Auth";
 import { useSelector, useDispatch } from "react-redux";
 import { setActive } from "../../../redux/MenuActive.js";
 import { useNavigate } from "react-router-dom";

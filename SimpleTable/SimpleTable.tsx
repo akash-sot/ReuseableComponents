@@ -8,11 +8,11 @@ import {
 import "./SimpleTable.scss";
 import { Excel } from "antd-table-saveas-excel";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../../API/Auth";
+import { auth } from "../../../CommonMethods/API/Auth";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import { convertDate } from "../../../Helper/Util";
-import { makeFirstLetterCapital } from "../../../Helper/Methods";
+import { makeFirstLetterCapital } from "../../../CommonMethods/Helper/Methods";
 
 interface IHeaderButtons {
   title: string;
