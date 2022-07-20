@@ -1,5 +1,4 @@
 import { Button, Dropdown, Table } from "antd";
-import React from "react";
 import {
   DownOutlined,
   FileExcelOutlined,
@@ -40,6 +39,8 @@ function NormalTable(props: {
   selectedRowKeys?: string[];
   isItSideTable?: boolean;
   exportToPdf?: boolean;
+  totalPaginationPages?: number;
+  setCurrentPaginationPageNum?: any;
 }) {
   const {
     columns,
@@ -58,6 +59,8 @@ function NormalTable(props: {
     selectedRowKeys,
     isItSideTable,
     exportToPdf,
+    totalPaginationPages,
+    setCurrentPaginationPageNum,
   } = props;
 
   const navigate = useNavigate();
@@ -125,8 +128,8 @@ function NormalTable(props: {
     doc.save(`${tableName || "soteriusTableData"}.pdf`);
   };
 
-  console.log(columns);
-  console.log(data);
+  // console.log(columns);
+  // console.log(data);
 
   return (
     <div className="normalTable">
@@ -229,6 +232,8 @@ function NormalTable(props: {
             pageSize: 10,
             hideOnSinglePage: true,
             pageSizeOptions: [10, 20],
+            total: totalPaginationPages,
+            onChange: (pageNumber) => setCurrentPaginationPageNum(pageNumber),
           }
         }
         scroll={
