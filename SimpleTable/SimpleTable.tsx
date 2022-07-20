@@ -39,7 +39,7 @@ function NormalTable(props: {
   selectedRowKeys?: string[];
   isItSideTable?: boolean;
   exportToPdf?: boolean;
-  totalPaginationPages?: number;
+  totalTableDataItems?: number;
   setCurrentPaginationPageNum?: any;
 }) {
   const {
@@ -59,7 +59,7 @@ function NormalTable(props: {
     selectedRowKeys,
     isItSideTable,
     exportToPdf,
-    totalPaginationPages,
+    totalTableDataItems,
     setCurrentPaginationPageNum,
   } = props;
 
@@ -232,7 +232,7 @@ function NormalTable(props: {
             pageSize: 10,
             hideOnSinglePage: true,
             pageSizeOptions: [10, 20],
-            total: totalPaginationPages,
+            total: totalTableDataItems,
             onChange: (pageNumber) => setCurrentPaginationPageNum(pageNumber),
           }
         }
