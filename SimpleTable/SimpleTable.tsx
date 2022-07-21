@@ -41,6 +41,7 @@ function NormalTable(props: {
   exportToPdf?: boolean;
   totalTableDataItems?: number;
   setCurrentPaginationPageNum?: any;
+  currentPaginationPageNum?: any;
 }) {
   const {
     columns,
@@ -61,6 +62,7 @@ function NormalTable(props: {
     exportToPdf,
     totalTableDataItems,
     setCurrentPaginationPageNum,
+    currentPaginationPageNum
   } = props;
 
   const navigate = useNavigate();
@@ -233,6 +235,7 @@ function NormalTable(props: {
             hideOnSinglePage: true,
             pageSizeOptions: [10, 20],
             total: totalTableDataItems,
+            current: currentPaginationPageNum,
             onChange: (pageNumber) => setCurrentPaginationPageNum(pageNumber),
           }
         }
