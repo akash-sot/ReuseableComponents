@@ -57,7 +57,6 @@ function Login(props: { userType: string }) {
     if (!validateEmail(email)) return;
 
     let res = await auth.getOTP(email);
-    console.log(res);
     if (res.status === 404) {
       message.error(res.message);
     } else {

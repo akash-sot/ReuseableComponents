@@ -130,9 +130,6 @@ function NormalTable(props: {
     doc.save(`${tableName || "soteriusTableData"}.pdf`);
   };
 
-  // console.log(columns);
-  // console.log(data);
-
   return (
     <div className="normalTable">
       <Table

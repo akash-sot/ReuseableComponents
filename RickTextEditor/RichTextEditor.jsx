@@ -5,7 +5,6 @@ import * as styles from "./RichTextEditorStyles";
 function RichTextEditor(props) {
   function handleInputChanges(event, editor) {
     const data = editor.getData();
-    console.log({ data });
     props.onChange && props.onChange(data)
   }
   return (
