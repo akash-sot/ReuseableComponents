@@ -38,7 +38,7 @@ function NormalTable(props: {
   exportable?: boolean;
   selectedRowKeys?: string[];
   isItSideTable?: boolean;
-  exportToPdf?: boolean;
+  exportToPdf?: any;
   totalTableDataItems?: number;
   setCurrentPaginationPageNum?: any;
   currentPaginationPageNum?: any;
@@ -62,12 +62,13 @@ function NormalTable(props: {
     exportToPdf,
     totalTableDataItems,
     setCurrentPaginationPageNum,
-    currentPaginationPageNum
+    currentPaginationPageNum,
   } = props;
 
   const navigate = useNavigate();
   const { getCurrentRole, isAuthenticated } = auth;
 
+  
   const exportAsPdf = () => {
     const pdfSize = columns.length >= 10 ? "a3" : "a4";
     const doc = new jsPDF("l", "pt", pdfSize).setFontSize(10);
@@ -213,7 +214,7 @@ function NormalTable(props: {
                   <Button
                     type={HeaderButtons ? "default" : "primary"}
                     icon={<FilePdfOutlined />}
-                    onClick={() => exportAsPdf()}
+                    onClick={() => exportToPdf()}
                   >
                     Export
                   </Button>
